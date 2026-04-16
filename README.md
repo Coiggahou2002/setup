@@ -98,6 +98,12 @@ fnm default lts-latest
 
 Download: https://iterm2.com/downloads.html
 
+Then install Shell Integration (enables inline image display in terminal):
+
+```bash
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+```
+
 ## 10. Set up app-switching shortcuts with Raycast + Karabiner-Elements
 
 - Install [Raycast](https://www.raycast.com/)
