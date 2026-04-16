@@ -140,7 +140,15 @@ alias zshconf="vim ~/.zshrc"
 alias reloadzsh="source ~/.zshrc"
 ```
 
-## 16. Mac Mouse Fix
+## 16. Enable key repeat on long press
+
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+> By default macOS shows an accent picker on long press. This disables it so keys repeat instead (useful for Vim).
+
+## 17. Mac Mouse Fix
 
 Install [Mac Mouse Fix](https://macmousefix.com/)
 
