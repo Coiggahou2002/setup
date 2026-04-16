@@ -12,7 +12,7 @@ My personal macOS setup guide — a step-by-step checklist for bootstrapping a n
 | Terminal | iTerm2, oh-my-zsh, Powerlevel10k |
 | Fonts | Iosevka, Monaspace |
 | Editor | VSCode |
-| AI | Claude Code |
+| AI | Claude Code, Ollama |
 | Productivity | Raycast, Karabiner-Elements, Maccy, Typeless, Snipaste |
 | Peripherals | Mac Mouse Fix |
 
@@ -152,7 +152,15 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 Install [Snipaste](https://www.snipaste.com/)
 
-## 18. Mac Mouse Fix
+## 18. Install Ollama
+
+Install [Ollama](https://ollama.com/) for running local LLMs:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+## 19. Mac Mouse Fix
 
 Install [Mac Mouse Fix](https://macmousefix.com/)
 
