@@ -20,116 +20,116 @@ My personal macOS setup guide — a step-by-step checklist for bootstrapping a n
 
 # Setup Checklist
 
-## 1. 安装 ClashV-Ninja
+## 1. Install ClashV-Ninja
 
 [jinkela.app](jinkela.app)
 
-## 2. 安装 Xcode
+## 2. Install Xcode
 
-App Store 搜索 Xcode 安装，或终端执行：
+Install from App Store, or run in terminal:
 
 ```bash
 xcode-select --install
 ```
 
-## 3. 安装 Homebrew
+## 3. Install Homebrew
 
-> 需要先完成 XCode Command Line Tools 的安装，才能安装 homebrew
+> Xcode Command Line Tools must be installed first.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## 4. 安装 Chrome
+## 4. Install Chrome
 
-> 本步骤需依赖 Clash-V-Ninjia，因为需要fq🪜
+> Requires ClashV-Ninja (proxy) to be set up first in 🇨🇳.
 
-下载安装：https://www.google.com/chrome/
+Download: https://www.google.com/chrome/
 
-## 5. 安装依赖 homebrew 的软件
+## 5. Install Homebrew packages
 
 ```bash
-# 终端字体
+# Terminal font
 brew install --cask font-iosevka
 
-# 代码字体
+# Code font
 brew install --cask font-monaspace
 
-# 剪贴板历史 
+# Clipboard manager
 brew install --cask maccy
 ```
 
-## 6. 安装 GitHub CLI 并登录
+## 6. Install GitHub CLI and sign in
 
 ```bash
 brew install gh
 gh auth login
 ```
 
-## 7. 配置 Git
+## 7. Configure Git
 
 ```bash
 git config --global user.name "your-username"
 git config --global user.email "your-email@example.com"
 ```
 
-## 8. 安装 fnm 和 Node.js
+## 8. Install fnm and Node.js
 
-> Claude Code 等工具依赖 Node.js，通过 fnm (Fast Node Manager) 管理版本
+> Tools like Claude Code depend on Node.js. Use [fnm](https://github.com/Schniz/fnm) (Fast Node Manager) to manage versions.
 
 ```bash
 brew install fnm
 ```
 
-在 `~/.zshrc` 中添加：
+Add to `~/.zshrc`:
 
 ```bash
 eval "$(fnm env --use-on-cd --shell zsh)"
 ```
 
-然后安装 Node.js：
+Then install Node.js:
 
 ```bash
 fnm install --lts
 fnm default lts-latest
 ```
 
-## 9. 安装 iTerm2
+## 9. Install iTerm2
 
-下载安装：https://iterm2.com/downloads.html
+Download: https://iterm2.com/downloads.html
 
-## 10. 通过 Raycast + Karabiner-Elements 定制应用拉起的快捷键
+## 10. Set up app-switching shortcuts with Raycast + Karabiner-Elements
 
-- 安装 [Raycast](https://www.raycast.com/)
-- 安装 [Karabiner-Elements](https://karabiner-elements.pqrs.org)
-- 完成后修改 Caps Lock 键映射为 Ctrl+Shift+Alt+Cmd
-- 配置 Raycast 快捷键
+- Install [Raycast](https://www.raycast.com/)
+- Install [Karabiner-Elements](https://karabiner-elements.pqrs.org)
+- Remap Caps Lock to Hyper Key (Ctrl+Shift+Alt+Cmd)
+- Configure Raycast hotkeys:
     - [ ] Caps + H → Chrome
     - [ ] Caps + V → VSCode
     - [ ] Caps + L → Lark
 
 ## 11. VSCode
 
-1. 安装 [VSCode](https://code.visualstudio.com/)
-2. 通过 GitHub 登陆，Sync Settings
-3. 安装 vim 插件
-4. 安装 Markdown Preview GitHub 插件
+1. Install [VSCode](https://code.visualstudio.com/)
+2. Sign in with GitHub to sync settings
+3. Install Vim extension
+4. Install Markdown Preview GitHub extension
 
-## 12. 安装 Typeless
+## 12. Install Typeless
 
-下载安装：https://typeless.app/
+Download: https://typeless.app/
 
-## 13. 安装 Claude Code
+## 13. Install Claude Code
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-## 14. 让 Claude Code 安装 oh-my-zsh
+## 14. Install oh-my-zsh via Claude Code
 
-## 15. 设置 ~/.zshrc
+## 15. Configure ~/.zshrc
 
-```
+```bash
 alias pull="git pull"
 alias gco="git checkout"
 
@@ -142,6 +142,6 @@ alias reloadzsh="source ~/.zshrc"
 
 ## 16. Mac Mouse Fix
 
-安装 [Mac Mouse Fix](https://macmousefix.com/)
+Install [Mac Mouse Fix](https://macmousefix.com/)
 
-用来 revert 鼠标滚轮
+Used to reverse mouse scroll direction.
