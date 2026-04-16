@@ -1,3 +1,23 @@
+# Mac Setup
+
+My personal macOS setup guide — a step-by-step checklist for bootstrapping a new Mac from scratch.
+
+## Overview
+
+| Category | Tools |
+|---------|-------|
+| Network | ClashV-Ninja |
+| Dev Essentials | Xcode, Homebrew, Git, gh |
+| Browser | Chrome |
+| Terminal | iTerm2, oh-my-zsh, Powerlevel10k |
+| Fonts | Iosevka, Monaspace |
+| Editor | VSCode |
+| AI | Claude Code |
+| Productivity | Raycast, Karabiner-Elements, Maccy, Typeless |
+| Peripherals | Mac Mouse Fix |
+
+---
+
 # Setup Checklist
 
 ## 1. 安装 ClashV-Ninja
