@@ -13,7 +13,7 @@ My personal macOS setup guide — a step-by-step checklist for bootstrapping a n
 | Fonts | Iosevka, Monaspace |
 | Editor | VSCode |
 | AI | Claude Code |
-| Productivity | Raycast, Karabiner-Elements, Maccy, Typeless |
+| Productivity | Raycast, Karabiner-Elements, Maccy, Typeless, Snipaste |
 | Peripherals | Mac Mouse Fix |
 
 ---
@@ -148,7 +148,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 > By default macOS shows an accent picker on long press. This disables it so keys repeat instead (useful for Vim).
 
-## 17. Mac Mouse Fix
+## 17. Install Snipaste
+
+Install [Snipaste](https://www.snipaste.com/)
+
+## 18. Mac Mouse Fix
 
 Install [Mac Mouse Fix](https://macmousefix.com/)
 
