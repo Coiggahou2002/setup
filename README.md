@@ -2,19 +2,32 @@
 
 Make a MacBook extremely productive for developers.
 
-## Overview
+![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple) ![License](https://img.shields.io/github/license/Coiggahou2002/setup) ![Last Commit](https://img.shields.io/github/last-commit/Coiggahou2002/setup)
 
-| Category | Tools |
-|---------|-------|
-| Network | ClashV-Ninja |
-| Dev Essentials | Xcode, Homebrew, Git, gh, fnm, Node.js |
-| Browser | Chrome |
-| Terminal | iTerm2 / Kaku, oh-my-zsh, Powerlevel10k |
-| Fonts | Iosevka, Monaspace |
-| Editor | VSCode |
-| AI | Claude Code, Ollama |
-| Productivity | Raycast, Karabiner-Elements, Maccy, Typeless, Snipaste |
-| Peripherals | Mac Mouse Fix |
+## TOC
+
+- [Climb Out of the GFW](#climb-out-of-the-gfw)
+- [Get Apple's Dev Toolchain](#get-apples-dev-toolchain)
+- [Get Package Manager](#get-package-manager)
+- [Get a Real Browser](#get-a-real-browser)
+- [Install Fonts](#install-fonts)
+- [Get a Clipboard History Manager](#get-a-clipboard-history-manager)
+- [Authenticate with GitHub CLI](#authenticate-with-github-cli)
+- [Set Git Identity](#set-git-identity)
+- [Set Up Node.js Version Management](#set-up-nodejs-version-management)
+- [Get a Better Terminal](#get-a-better-terminal)
+- [Switch Apps Without Touching the Trackpad](#switch-apps-without-touching-the-trackpad)
+- [Get Code Editor](#get-code-editor)
+- [Don't Type, Just Speak](#️-dont-type-just-speak)
+- [Get Your AI Coding Partner](#get-your-ai-coding-partner)
+- [Make the Shell Usable](#make-the-shell-usable)
+- [Set Up Shell Aliases](#set-up-shell-aliases)
+- [Fix Long-Press Behavior for Vim](#fix-long-press-behavior-for-vim)
+- [Screenshot and Pin Anything](#screenshot-and-pin-anything)
+- [Run LLMs Locally](#run-llms-locally)
+- [Fix Mouse Scroll Direction](#fix-mouse-scroll-direction)
+- [Enable Three-Finger Drag on Trackpad](#enable-three-finger-drag-on-trackpad)
+- [Use F-Keys Without Holding Fn](#use-f-keys-without-holding-fn)
 
 ---
 
@@ -118,6 +131,17 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 
 > **Note:** iTerm2 is the best terminal overall, but it has some rendering issues when used with Coding CLIs like Claude Code. If you are a heavy Claude Code user, consider using [Kaku](https://github.com/tw93/kaku) instead.
 
+**Kaku shortcuts:**
+
+| Shortcut | Action |
+|----------|--------|
+| `Cmd+Shift+P` | Open command palette |
+| `Cmd+T` | New tab |
+| `Cmd+1/2/3...` | Switch to tab by number |
+| `Cmd+D` | Split pane to the right |
+| `Cmd+Shift+D` | Split pane below |
+| `Cmd+W` | Close current pane |
+
 ## <img src="assets/icons/raycast.svg" height="26" align="center" /> <img src="assets/icons/karabiner.png" height="26" align="center" /> Switch Apps Without Touching the Trackpad
 
 Set up app-switching shortcuts with Raycast + Karabiner-Elements:
@@ -126,13 +150,13 @@ Set up app-switching shortcuts with Raycast + Karabiner-Elements:
 - Install [Karabiner-Elements](https://karabiner-elements.pqrs.org)
 - Remap Caps Lock to Hyper Key (Ctrl+Shift+Alt+Cmd)
 - Configure Raycast hotkeys:
-    - [ ] Caps + H → Chrome
-    - [ ] Caps + V → VSCode
-    - [ ] Caps + L → Lark
-    - [ ] Caps + O → Obsidian
-    - [ ] Caps + S → Superhuman
-    - [ ] Caps + M → Outlook
-    - [ ] ...
+    - `Caps + H` → Chrome
+    - `Caps + V` → VSCode
+    - `Caps + L` → Lark
+    - `Caps + O` → Obsidian
+    - `Caps + S` → Superhuman
+    - `Caps + M` → Outlook
+    - ...
 
 ## <img src="assets/icons/vscode.png" height="26" align="center" /> Get Code Editor
 
@@ -143,7 +167,7 @@ Install VSCode:
 3. Install Vim extension
 4. Install Markdown Preview GitHub extension
 
-## ⌨️ Stop Typing Repetitive Text
+## ⌨️ Don't Type, Just Speak.
 
 Install [Typeless](https://typeless.app/)
 
@@ -161,14 +185,16 @@ Installing and configuring oh-my-zsh (with plugins, themes, etc.) is a bit tedio
 
 ## Set Up Shell Aliases
 
-Configure `~/.zshrc`:
+Configure `~/.zshrc`
+
+> ⚠️ For reference only — adjust to your own needs.
 
 ```bash
 alias pull="git pull"
 alias gco="git checkout"
 
 alias proxy="export https_proxy=http://127.0.0.1:6789 http_proxy=http://127.0.0.1:6789 all_proxy=socks5://127.0.0.1:6789 && echo '✅ proxy configured in current session'"
-alias claudep="claude --dangerously-skip-permissions"
+alias claude="proxy && claude --dangerously-skip-permissions"
 
 alias zshconf="vim ~/.zshrc"
 alias reloadzsh="source ~/.zshrc"
@@ -188,6 +214,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 Install [Snipaste](https://www.snipaste.com/)
 
+- Press `F1` to take a screenshot (if it doesn't work, try `Fn+F1` — or adjust the F-key behavior in the [Use F-Keys Without Holding Fn](#use-f-keys-without-holding-fn) section).
+- Click **Pin** to paste the screenshot onto the desktop.
+- Drag a pinned image to reposition it;
+- Double-click it to dismiss.
+
 ## <img src="assets/icons/ollama.svg" height="26" align="center" /> Run LLMs Locally
 
 Install [Ollama](https://ollama.com/):
@@ -201,6 +232,12 @@ curl -fsSL https://ollama.com/install.sh | sh
 Install [Mac Mouse Fix](https://macmousefix.com/)
 
 macOS only lets you pick one scroll direction for everything. Mac Mouse Fix decouples the two: trackpad keeps its natural scroll direction, while the mouse wheel is reversed to match physical expectations.
+
+## Enable Three-Finger Drag on Trackpad
+
+In **System Settings → Accessibility → Pointer Control → Trackpad Options**, enable **"Use trackpad for dragging"** and set the dragging style to **"Three-Finger Drag"**.
+
+This lets you drag windows and select text by moving three fingers, without needing to click and hold.
 
 ## Use F-Keys Without Holding Fn
 
