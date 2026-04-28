@@ -20,11 +20,11 @@ Make a MacBook extremely productive for developers.
 
 # Setup Checklist
 
-## <img src="assets/icons/clash.png" height="20" align="center" /> Climb Out of the GFW
+## <img src="assets/icons/clash.png" height="26" align="center" /> Climb Out of the GFW
 
 Install ClashV-Ninja: [jinkela.app](jinkela.app)
 
-## <img src="assets/icons/xcode.svg" height="20" align="center" /> Get Apple's Dev Toolchain
+## <img src="assets/icons/xcode.svg" height="26" align="center" /> Get Apple's Dev Toolchain
 
 Install Xcode from App Store, or run in terminal:
 
@@ -32,7 +32,7 @@ Install Xcode from App Store, or run in terminal:
 xcode-select --install
 ```
 
-## <img src="assets/icons/homebrew.svg" height="20" align="center" /> Get Package Manager
+## <img src="assets/icons/homebrew.svg" height="26" align="center" /> Get Package Manager
 
 Install Homebrew:
 
@@ -42,7 +42,7 @@ Install Homebrew:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## <img src="assets/icons/chrome.svg" height="20" align="center" /> Get a Real Browser
+## <img src="assets/icons/chrome.svg" height="26" align="center" /> Get a Real Browser
 
 Install Chrome:
 
@@ -62,28 +62,28 @@ brew install --cask font-iosevka
 brew install --cask font-monaspace
 ```
 
-## <img src="assets/icons/maccy.png" height="20" align="center" /> Get a Clipboard History Manager
+## <img src="assets/icons/maccy.png" height="26" align="center" /> Get a Clipboard History Manager
 
 ```bash
 # Clipboard manager
 brew install --cask maccy
 ```
 
-## <img src="assets/icons/github.svg" height="20" align="center" /> Authenticate with GitHub CLI
+## <img src="assets/icons/github.svg" height="26" align="center" /> Authenticate with GitHub CLI
 
 ```bash
 brew install gh
 gh auth login
 ```
 
-## <img src="assets/icons/git.svg" height="20" align="center" /> Set Git Identity
+## <img src="assets/icons/git.svg" height="26" align="center" /> Set Git Identity
 
 ```bash
 git config --global user.name "your-username"
 git config --global user.email "your-email@example.com"
 ```
 
-## <img src="assets/icons/nodejs.svg" height="20" align="center" /> Set Up Node.js Version Management
+## <img src="assets/icons/nodejs.svg" height="26" align="center" /> Set Up Node.js Version Management
 
 Install fnm and Node.js:
 
@@ -106,7 +106,7 @@ fnm install --lts
 fnm default lts-latest
 ```
 
-## <img src="assets/icons/kaku.png" height="20" align="center" /> Get a Better Terminal
+## <img src="assets/icons/kaku.png" height="26" align="center" /> Get a Better Terminal
 
 Install iTerm2: https://iterm2.com/downloads.html
 
@@ -118,7 +118,7 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 
 > **Note:** iTerm2 is the best terminal overall, but it has some rendering issues when used with Coding CLIs like Claude Code. If you are a heavy Claude Code user, consider using [Kaku](https://github.com/tw93/kaku) instead.
 
-## <img src="assets/icons/raycast.svg" height="20" align="center" /> <img src="assets/icons/karabiner.png" height="20" align="center" /> Switch Apps Without Touching the Trackpad
+## <img src="assets/icons/raycast.svg" height="26" align="center" /> <img src="assets/icons/karabiner.png" height="26" align="center" /> Switch Apps Without Touching the Trackpad
 
 Set up app-switching shortcuts with Raycast + Karabiner-Elements:
 
@@ -134,7 +134,7 @@ Set up app-switching shortcuts with Raycast + Karabiner-Elements:
     - [ ] Caps + M → Outlook
     - [ ] ...
 
-## <img src="assets/icons/vscode.png" height="20" align="center" /> Get Code Editor
+## <img src="assets/icons/vscode.png" height="26" align="center" /> Get Code Editor
 
 Install VSCode:
 
@@ -147,7 +147,7 @@ Install VSCode:
 
 Install [Typeless](https://typeless.app/)
 
-## <img src="assets/icons/claude.png" height="20" align="center" /> Get Your AI Coding Partner
+## <img src="assets/icons/claude.png" height="26" align="center" /> Get Your AI Coding Partner
 
 Install Claude Code:
 
@@ -155,7 +155,7 @@ Install Claude Code:
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-## <img src="assets/icons/ohmyzsh.png" height="20" align="center" /> Make the Shell Usable
+## <img src="assets/icons/ohmyzsh.png" height="26" align="center" /> Make the Shell Usable
 
 Installing and configuring oh-my-zsh (with plugins, themes, etc.) is a bit tedious. Just let Claude Code handle it — ask it to install and set up oh-my-zsh for you.
 
@@ -174,7 +174,7 @@ alias zshconf="vim ~/.zshrc"
 alias reloadzsh="source ~/.zshrc"
 ```
 
-## <img src="assets/icons/vim.svg" height="20" align="center" /> Fix Long-Press Behavior for Vim
+## <img src="assets/icons/vim.svg" height="26" align="center" /> Fix Long-Press Behavior for Vim
 
 Enable key repeat on long press:
 
@@ -184,11 +184,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 > By default macOS shows an accent picker on long press. This disables it so keys repeat instead (useful for Vim).
 
-## <img src="assets/icons/snipaste.svg" height="20" align="center" /> Screenshot and Pin Anything
+## <img src="assets/icons/snipaste.svg" height="26" align="center" /> Screenshot and Pin Anything
 
 Install [Snipaste](https://www.snipaste.com/)
 
-## <img src="assets/icons/ollama.svg" height="20" align="center" /> Run LLMs Locally
+## <img src="assets/icons/ollama.svg" height="26" align="center" /> Run LLMs Locally
 
 Install [Ollama](https://ollama.com/):
 
@@ -196,7 +196,7 @@ Install [Ollama](https://ollama.com/):
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-## <img src="assets/icons/macmousefix.png" height="20" align="center" /> Fix Mouse Scroll Direction
+## <img src="assets/icons/macmousefix.png" height="26" align="center" /> Fix Mouse Scroll Direction
 
 Install [Mac Mouse Fix](https://macmousefix.com/)
 
