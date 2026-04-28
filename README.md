@@ -1,4 +1,4 @@
-# Mac Setup
+# oh-my-mac
 
 Make a MacBook extremely productive for developers.
 
@@ -82,6 +82,14 @@ brew install --cask font-monaspace
 brew install --cask maccy
 ```
 
+| Shortcut | Action |
+|----------|--------|
+| <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd> | Open clipboard history |
+| <kbd>↑</kbd> / <kbd>↓</kbd> then <kbd>↩</kbd> | Select and paste an item |
+| Type to filter | Search through history |
+| <kbd>⌥</kbd> <kbd>P</kbd> | Pin / unpin item to top |
+| <kbd>⌥</kbd> <kbd>⌫</kbd> | Delete item from history |
+
 ## <img src="assets/icons/github.svg" height="26" align="center" /> Authenticate with GitHub CLI
 
 ```bash
@@ -135,28 +143,36 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 
 | Shortcut | Action |
 |----------|--------|
-| `Cmd+Shift+P` | Open command palette |
-| `Cmd+T` | New tab |
-| `Cmd+1/2/3...` | Switch to tab by number |
-| `Cmd+D` | Split pane to the right |
-| `Cmd+Shift+D` | Split pane below |
-| `Cmd+W` | Close current pane |
+| <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd> | Open command palette |
+| <kbd>⌘</kbd> <kbd>T</kbd> | New tab |
+| <kbd>⌘</kbd> <kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd>... | Switch to tab by number |
+| <kbd>⌘</kbd> <kbd>D</kbd> | Split pane to the right |
+| <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>D</kbd> | Split pane below |
+| <kbd>⌘</kbd> <kbd>W</kbd> | Close current pane |
+
+> **Tip:** In Kaku Settings, you can enable **Confirm Tab Close** and **Confirm Pane Close** (both off by default) to avoid accidentally closing tabs or panes.
 
 ## <img src="assets/icons/raycast.svg" height="26" align="center" /> <img src="assets/icons/karabiner.png" height="26" align="center" /> Switch Apps Without Touching the Trackpad
 
-Set up app-switching shortcuts with Raycast + Karabiner-Elements:
+### 1. Bind global hot key for apps via Raycast
 
-- Install [Raycast](https://www.raycast.com/)
-- Install [Karabiner-Elements](https://karabiner-elements.pqrs.org)
-- Remap Caps Lock to Hyper Key (Ctrl+Shift+Alt+Cmd)
-- Configure Raycast hotkeys:
-    - `Caps + H` → Chrome
-    - `Caps + V` → VSCode
-    - `Caps + L` → Lark
-    - `Caps + O` → Obsidian
-    - `Caps + S` → Superhuman
-    - `Caps + M` → Outlook
-    - ...
+**Raycast** is a launcher that replaces Spotlight. Among many other things, it lets you bind a global hotkey to any app so you can jump to it instantly from anywhere.
+
+Install [Raycast](https://www.raycast.com/), then press <kbd>⌘</kbd> <kbd>,</kbd> to open Settings → **Extensions** → find an app → set its hotkey.
+
+### 2. Modify useless Capslock to Hyper Key
+
+**Karabiner-Elements** handles the keyboard remapping layer. Caps Lock is otherwise a wasted key — Karabiner remaps it to a **Hyper Key** (⌃⇧⌥⌘ all at once), a combination nothing else uses, so it becomes a safe namespace for your own shortcuts. Install [Karabiner-Elements](https://karabiner-elements.pqrs.org), then remap Caps Lock to Hyper Key (⌃⇧⌥⌘).
+
+Once both are set up, configure Raycast hotkeys:
+
+- <kbd>Caps</kbd> + <kbd>H</kbd> → Chrome
+- <kbd>Caps</kbd> + <kbd>V</kbd> → VSCode
+- <kbd>Caps</kbd> + <kbd>L</kbd> → Lark
+- <kbd>Caps</kbd> + <kbd>O</kbd> → Obsidian
+- <kbd>Caps</kbd> + <kbd>S</kbd> → Superhuman
+- <kbd>Caps</kbd> + <kbd>M</kbd> → Outlook
+- ...
 
 ## <img src="assets/icons/vscode.png" height="26" align="center" /> Get Code Editor
 
@@ -214,7 +230,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 Install [Snipaste](https://www.snipaste.com/)
 
-- Press `F1` to take a screenshot (if it doesn't work, try `Fn+F1` — or adjust the F-key behavior in the [Use F-Keys Without Holding Fn](#use-f-keys-without-holding-fn) section).
+- Press <kbd>F1</kbd> to take a screenshot (if it doesn't work, try <kbd>Fn</kbd> <kbd>F1</kbd> — or adjust the F-key behavior in the [Use F-Keys Without Holding Fn](#use-f-keys-without-holding-fn) section).
 - Click **Pin** to paste the screenshot onto the desktop.
 - Drag a pinned image to reposition it;
 - Double-click it to dismiss.
@@ -243,4 +259,4 @@ This lets you drag windows and select text by moving three fingers, without need
 
 In **System Settings → Keyboard**, enable **"Use F1, F2, etc. keys as standard function keys"**.
 
-By default, bare F-key presses trigger media controls (brightness, volume); you need Fn+F1 to send a real function key. Flipping this setting reverses the behavior — F1 sends a real function key directly, and Fn+F1 triggers media controls instead.
+By default, bare F-key presses trigger media controls (brightness, volume); you need <kbd>Fn</kbd> <kbd>F1</kbd> to send a real function key. Flipping this setting reverses the behavior — <kbd>F1</kbd> sends a real function key directly, and <kbd>Fn</kbd> <kbd>F1</kbd> triggers media controls instead.
